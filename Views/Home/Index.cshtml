@@ -9,7 +9,7 @@
 
 <!--Main name header-->
 <div class="container-fluid" >
-    <h1>Lucas D. Townsend</h1>
+    <h1 style="font-size:400%;">Lucas D. Townsend</h1>
     <p style="padding-left:40px;">Software Design and Other Creative Endeavors</p>
 </div>
 
@@ -26,24 +26,24 @@
 @foreach (var item in Model)
 {
     <!--Header bar for each project. Name pulled from database.-->
-    <div class="row" style="background-color:lavender;">
+    <div class="row projectheader">
         <h4 class="projectname">@Html.DisplayFor(modelItem => item.Name)</h4>
     </div>
 
     <!--Create and populate screenshot div for each project from database-->
-    <div class="row" style="background-color:lavenderblush;">
+    <div class="row projectbody">
         <div class="col-md-6">
-            <img src="~/@Html.DisplayFor(modelItem => item.Screenshot)" class="img-responsive" style="max-height:200px; width:auto;" />
+            <img src="~/@Html.DisplayFor(modelItem => item.Screenshot)" class="img-responsive screenshot" />
         </div>
         <!--Create and populate details div for each project from database-->
-        <div class="col-md-6">
+        <div class="col-md-6" style="padding-top:10px;">
             <p class="summary">@Html.DisplayFor(modelItem => item.Timeline)</p>
             <p class="summary">@Html.DisplayFor(modelItem => item.Summary)</p>
             <p class="summary">Made with @Html.DisplayFor(modelitem => item.Languages)</p>
-            <a href="@Html.DisplayFor(modelitem => item.Github)" target="_blank">TAKE A LOOK</a>
+            <a href="@Html.DisplayFor(modelitem => item.Github)" target="_blank" class="btn btn-block btn-details">TAKE A LOOK</a>
         </div>
     </div>
-    <div class="row" style="padding-top: 5px;"></div>
+    <div class="row" style="padding-top: 10px;"></div>
 
 }
 
@@ -61,7 +61,7 @@
 <!--Small empty space to make it look pretty-->
 <div class="row" style="padding-top: 10px; background-color:lavenderblush"></div>
 
-<div class="row" style="background-color:lavenderblush;">
+<div class="row border" style="background-color:lavenderblush;">
     <!--Div for 'about' image-->
     <div class="col-md-1"></div>
     <div class="col-md-3">
@@ -70,10 +70,10 @@
     <!--Div for bio, appears beside image-->
     <div class="col-md-7">
         <p style="margin:auto; padding-top:10px;">Usually seen covered in heavy-breathing pugs, Lucas has no choice but to make things. Seriously, he tried
-        doing other kinds of work and he couldn't do it even if he wanted to. When he started his undergrad in business, he only kept himself sane
-        by writing and producing a no-budget sketch comedy podcast in his spare time. After getting a degree in audio production and discovering
-        the media industry was not for him, he made a YouTube series about old video games to keep himself going through an exhausting full-time
-        office job. Don't even get me started on grad school.</p><br />
+        doing other kinds of work and he couldn't do it even if he wanted to. Starting his undergrad in business, he only maintained his sanity
+        by writing and producing a sketch comedy podcast in his spare time. After earning a degree in audio production and discovering
+        the media industry was not for him, he made a weekly YouTube series about old video games to keep himself going through an exhausting
+        office job.</p><br />
 
         <p>Our intrepid protagonist finally realized that writing software fulfilled his unrelenting need for creative work, and he was pretty good
         at it. Not looking forward to starting his university career from scratch, he discovered coding bootcamp, a mystical and mysterious
@@ -98,11 +98,11 @@
 <!--<div class="row" style="padding-top: 10px;"></div>-->
 
 <!--Row for WCCI logo-->
-<div class="row schoolcontainer">
+<div class="row schoolcontainer border">
     <img src="~/assets/WCCI.png" class="img-responsive school" alt="We Can Code IT" />
 </div>
 <!--WCCI details to appear below logo-->
-<div class="row schoolinfo">
+<div class="row schoolinfo border">
     <h3>Coding Bootcamp</h3>
     <h3 class="spacer">Shaker Heights, Ohio</h3>
     <h4>Comprehensive .NET Framework Cirriculum</h4>
@@ -113,11 +113,11 @@
 <div style="padding-top: 10px;"></div>
 
 <!--Row for OU logo-->
-<div class="row schoolcontainer">
+<div class="row schoolcontainer border">
     <img src="~/assets/ohio.png" class="img-responsive school" alt="Ohio University" />
 </div>
 <!--OU details to appear below logo-->
-<div class="row schoolinfo">
+<div class="row schoolinfo border">
     <h3>Scripps College of Communication</h3>
     <h3 class="spacer">Athens, Ohio</h3>
     <h4>Bachelor's Degree in Audio Post-Production for the Moving Image</h4>
@@ -126,20 +126,3 @@
 
 <!--Anchor for navbar link and empty div to compensate for navbar-->
 <a name="contact"></a>
-<div class="row navspacer"></div>
-
-<!--Header for 'contact' section-->
-<div class="row" style="background-color:#000000;">
-    <div class="container-fluid">
-        <h2 class="headertext">Contact<span class="blink">_</span></h2>
-    </div>
-</div>
-
-<!--Row for social media links. Same color as header for one uninterrupted section.-->
-<div class="row" style="background-color:#000000">
-    <a href="https://www.linkedin.com/in/lucas-d-townsend-91421232" title="LinkedIn" target="_blank"><img src="~/assets/social/64-linkedin.png" class="school" alt="LinkedIn" /></a>
-    <a href="https://github.com/lucasdtownsend" title="GitHub" target="_blank"><img src="~/assets/github.png" class="school" alt="GitHub"  /></a>
-    <a href="https://www.youtube.com/user/Bitrona" title="YouTube" target="_blank"><img src="~/assets/social/64-youtube.png" class="school" alt="YouTube" /></a>
-    <a href="https://twitter.com/seamusmcfly" title="Twitter" target="_blank"><img src="~/assets/social/64-twitter.png" class="school" alt="Twitter" /></a>
-    <a href="https://www.facebook.com/profile.php?id=12331980" title="Facebook" target="_blank"><img src="~/assets/social/64-facebook.png" class="school" alt="Facebook" /></a>
-</div>

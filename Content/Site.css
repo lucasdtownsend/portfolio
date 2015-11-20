@@ -32,6 +32,30 @@ h4.projectname{
     font-family:Consolas;
 }
 
+div.projectheader {
+    background-color: lavender;
+    border: solid #4d4d4d 1px;
+    border-bottom-color: lavenderblush;
+}
+
+div.projectbody{
+    background-color:lavenderblush;
+    border: solid #000000 1px;
+    border-top-color: lavender;
+}
+
+.screenshot{
+    max-height:200px; 
+    width:auto; 
+    margin:auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div.border{
+    border: solid #4d4d4d 1px;
+}
+
 p{
     font-family:Consolas;
 }
@@ -66,6 +90,22 @@ div.schoolinfo{
 h2.headertext{
     color:white;
     padding-left:10px;
+}
+
+.btn-details {
+    background: #c9c9c9;
+    color: #4d4d4d;
+    font-family: Consolas;
+    font-size: large;
+    border: solid #4d4d4d 1px;
+    margin-bottom: 10px;
+}
+
+.btn-details:hover {
+    background: #4d4d4d;
+    font-weight:500;
+    color:#c9c9c9;
+    border-color: #c9c9c9;
 }
 
 span.blink {   
