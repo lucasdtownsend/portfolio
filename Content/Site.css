@@ -1,0 +1,68 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #fffff0;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+h1, h2, h3, h4{
+    font-family:Consolas;
+}
+
+p.summary
+{
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+
+h4.projectname{
+    padding-left: 20px;
+    font-family:Consolas;
+}
+
+p{
+    font-family:Consolas;
+}
+
+div.navspacer{
+    padding-top:50px;
+}
+
+img.school{
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left: 15px;
+    height:60px;
+    width:auto;
+}
+
+div.schoolcontainer{
+    background-color:#3d3d3d;
+    min-height:80px;
+    padding-top: 10px;
+}
+
+h3.spacer{
+    padding-bottom:5px;
+}
+
+div.schoolinfo{
+    padding-left:5px;
+}
+
+h2.headertext{
+    color:white;
+    padding-left:10px;
+}

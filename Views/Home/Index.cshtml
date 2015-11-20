@@ -1,0 +1,142 @@
+﻿@model IEnumerable<TownsendPortfolio.Models.Project>
+@{
+    ViewBag.Title = "LDT";
+}
+
+<div style="padding-top: 20px;"></div>
+
+<!--Main name header-->
+<div class="container-fluid" >
+    <h1>Lucas D. Townsend</h1>
+    <p style="padding-left:40px;">Software Design and Other Creative Endeavors</p>
+</div>
+
+<!--Anchor for projects section and div to compensate for navbar-->
+<a name="projects"></a>
+<div class="navspacer" />
+
+<!--Projects header-->
+<div class="row" style="background-color:#000000;">
+    <h2 class="headertext">Projects_</h2>
+</div>
+
+<!--Loop through every row in the project database and create an entry for each one.-->
+@foreach (var item in Model)
+{
+    <!--Header bar for each project. Name pulled from database.-->
+    <div class="row" style="background-color:lavender;">
+        <h4 class="projectname">@Html.DisplayFor(modelItem => item.Name)</h4>
+    </div>
+
+    <!--Create and populate screenshot div for each project from database-->
+    <div class="row" style="background-color:lavenderblush;">
+        <div class="col-md-6">
+            <img src="~/@Html.DisplayFor(modelItem => item.Screenshot)" class="img-responsive" style="max-height:200px; width:auto;" />
+        </div>
+        <!--Create and populate details div for each project from database-->
+        <div class="col-md-6">
+            <p class="summary">@Html.DisplayFor(modelItem => item.Timeline)</p>
+            <p class="summary">@Html.DisplayFor(modelItem => item.Summary)</p>
+            <p class="summary">Made with @Html.DisplayFor(modelitem => item.Languages)</p>
+            <a href="@Html.DisplayFor(modelitem => item.Github)" target="_blank">TAKE A LOOK</a>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 5px;"></div>
+
+}
+
+<!--Anchor point and div to compensate for navbar-->
+<a name="about"></a>
+<div class="navspacer" />
+
+<!--About section header-->
+<div class="row" style="background-color:#000000;">
+    <div class="container-fluid">
+        <h2 class="headertext">About_</h2>
+    </div>
+</div>
+
+<!--Small empty space to make it look pretty-->
+<div class="row" style="padding-top: 10px;"></div>
+
+<div class="row">
+    <!--Div for 'about' image-->
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+        <img src="~/assets/mcfly.png" class="img-responsive" />
+    </div>
+    <!--Div for bio, appears beside image-->
+    <div class="col-md-7">
+        <p style="margin:auto; padding-top:10px;">Usually seen with covered in heavy-breathing pugs, Lucas has no choice but to make things. Seriously, he tried
+        doing other kinds of work and he couldn't do it even if he wanted to. When he started his undergrad in business, he only kept himself sane
+        by writing and producing a no-budget sketch comedy podcast in his spare time. After getting a degree in audio production and discovering
+        the media industry was not for him, he made a YouTube series about old video games to keep himself going through an exhausting full-time
+        office job. Don't even get me started on grad school.</p><br />
+        
+        <p>Our intrepid protagonist finally realized that writing software fulfilled his unrelenting need for creative work, and he was pretty good
+        at it. Not looking forward to starting his university career from scratch, he discovered coding bootcamp, a mystical and mysterious
+        land that offered exactly the kind of fast paced and comprehensive learning environment he had always dreamed of. His experience now includes <b>.NET Framework, Object Oriented Design, C#, ASP.NET, MVC, XAML, HTML, CSS, Python, Git, WPF, SQL, ActionScript and Flash.</b>
+        <br /> <br />
+        All told, it worked out pretty well.
+        </p>
+    </div>
+</div>
+
+<a name="education"></a>
+<div class="navspacer"></div>
+
+<!--Header for Education section-->
+<div class="row" style="background-color:#000000;">
+    <div class="container-fluid">
+        <h2 class="headertext">Education_</h2>
+    </div>
+</div>
+
+<!--Empty space to make it look nice-->
+<div class="row" style="padding-top: 10px;"></div>
+
+<!--Row for WCCI logo-->
+<div class="row schoolcontainer">
+    <img src="~/assets/WCCI.png" class="img-responsive school" alt="We Can Code IT" />
+</div>
+<!--WCCI details to appear below logo-->
+<div class="row schoolinfo">
+    <h3>Coding Bootcamp</h3>
+    <h3 class="spacer">Shaker Heights, Ohio</h3>
+    <h4>Comprehensive .NET Framework Cirriculum</h4>
+    <h4>2015</h4>
+</div>
+
+<!--Empty div for spacing-->
+<div style="padding-top: 10px;"></div>
+
+<!--Row for OU logo-->
+<div class="row schoolcontainer">
+    <img src="~/assets/ohio.png" class="img-responsive school" alt="Ohio University" />
+</div>
+<!--OU details to appear below logo-->
+<div class="row schoolinfo">
+    <h3>Scripps College of Communication</h3>
+    <h3 class="spacer">Athens, Ohio</h3>
+    <h4>Bachelor's Degree in Audio Post-Production for the Moving Image</h4>
+    <h4>2006 - 2011</h4>
+</div>
+
+<!--Anchor for navbar link and empty div to compensate for navbar-->
+<a name="contact"></a>
+<div class="row navspacer"></div>
+
+<!--Header for 'contact' section-->
+<div class="row" style="background-color:#000000;">
+    <div class="container-fluid">
+        <h2 class="headertext">Contact_</h2>
+    </div>
+</div>
+
+<!--Row for social media links. Same color as header for one uninterrupted section.-->
+<div class="row" style="background-color:#000000">
+    <a href="https://www.linkedin.com/in/lucas-d-townsend-91421232" title="LinkedIn" target="_blank"><img src="~/assets/social/64-linkedin.png" class="school" alt="LinkedIn" /></a>
+    <a href="https://github.com/lucasdtownsend" title="GitHub" target="_blank"><img src="~/assets/github.png" class="school" alt="GitHub"  /></a>
+    <a href="https://www.youtube.com/user/Bitrona" title="YouTube" target="_blank"><img src="~/assets/social/64-youtube.png" class="school" alt="YouTube" /></a>
+    <a href="https://twitter.com/seamusmcfly" title="Twitter" target="_blank"><img src="~/assets/social/64-twitter.png" class="school" alt="Twitter" /></a>
+</div>

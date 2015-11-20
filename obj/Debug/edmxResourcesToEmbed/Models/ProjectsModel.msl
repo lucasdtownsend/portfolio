@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ldtPortfolioModelStoreContainer" CdmEntityContainer="ldtPortfolioEntities1">
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="ldtPortfolioModel.Project">
+        <MappingFragment StoreEntitySet="Projects">
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Timeline" ColumnName="Timeline" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Languages" ColumnName="Languages" />
+          <ScalarProperty Name="Screenshot" ColumnName="Screenshot" />
+          <ScalarProperty Name="Github" ColumnName="Github" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
